@@ -1,0 +1,105 @@
+$list-background: hsl(157, 61%, 73%);
+$text-color: hsl(256, 80%, 15%);
+
+.ContactList {
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 800px;
+    background-color: $list-background;
+    padding: 0 0 40px;
+    box-shadow: 0 0 40px hsl(157, 61%, 53%);
+    display: flex;
+    flex-direction: column;
+    color: $text-color;
+    border-style: solid;
+    border-width: 0 15px;
+    border-color: hsl(157, 61%, 73%);
+}
+
+h1 {
+    -webkit-text-stroke: 3px hsl(325, 63%, 59%);
+    text-shadow: 0 0 10px hsl(325, 63%, 59%);
+    letter-spacing: 20px;
+    text-indent: 20px;
+    font-size: 70px;
+    text-align: center;
+    font-weight: bold;
+    font-variant-caps: small-caps;
+    color: hsl(202, 63%, 59%);
+    text-decoration: overline;
+}
+
+td > img {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 0;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 10px hsl(325, 63%, 59%);
+    box-shadow: 0 0 10px hsl(325, 63%, 59%);
+}
+
+table, td, th {
+    border-collapse: collapse;
+}
+
+thead {
+    position: sticky;
+    top: 50px;
+    background-color: $list-background;
+}
+
+td, th{
+    background-color: $list-background;
+    text-align: center;
+    width: calc(100% / 6);
+    padding: 10px;
+}
+
+.dark-row > td {
+    background-color: hsl(157, 61%, 63%);
+    button {
+        background-color: $list-background;
+    }
+
+    img {
+        border: solid 10px hsl(202, 63%, 59%);
+        box-shadow: 0 0 10px hsl(325, 63%, 59%);
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: $list-background;
+    padding: 10px 0;
+    height: 30px;
+    column-gap: 5px;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    background-color: hsl(157, 61%, 63%);
+    color: $text-color;
+    padding: 10px;
+    border-radius: 3px;
+    border: solid 2px transparent;
+    font-weight: bold;
+}
+
+button:hover {
+    border: solid 2px $text-color;
+}
+
+tr button {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+tr:hover button {
+    opacity: 1;
+    transition: opacity 0.3s;
+}

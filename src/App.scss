@@ -1,0 +1,33 @@
+body {
+  background-color: hsl(325, 63%, 39%);
+}
+
+.App {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App::after {
+  content: "";
+  position: fixed;
+  width: 1000px;
+  height: 100vh;
+  background-color: hsl(325, 63%, 59%);
+  transform: rotate(15deg);
+  z-index: -1;
+  box-shadow: 0 0 30px hsl(325, 63%, 59%);
+}
+
+.App::before {
+  content: "";
+  position: fixed;
+  width: 1000px;
+  height: 100vh;
+  background-color: hsl(202, 63%, 59%);
+  transform: rotate(-15deg);
+  z-index: -1;
+  box-shadow: 0 0 30px hsl(202, 63%, 59%);
+}
